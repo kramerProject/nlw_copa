@@ -7,7 +7,7 @@ async function main() {
     const user = await prisma.user.create({
         data: {
             name: 'John',
-            email: 'johm@gmail.com',
+            email: 'johm_dooo@gmail.com',
             avatarUrl: 'https://github.com/kramerProject.png',
         }
     })
@@ -15,7 +15,7 @@ async function main() {
     const pool = await prisma.pool.create({
         data: {
             title: 'Example Pool',
-            code: 'Bol123',
+            code: 'Bolo123',
             ownerId: user.id,
             participants: {
                 create: {
@@ -29,7 +29,7 @@ async function main() {
         data: {
             date: '2022-11-02T14:03:53.201Z',
             firstTeamCountryCode: 'DE',
-            secondTeamCountruCode: 'BR',
+            secondTeamCountryCode: 'BR',
         }
     })
 
@@ -37,7 +37,7 @@ async function main() {
         data: {
             date: '2022-11-03T14:03:53.201Z',
             firstTeamCountryCode: 'BR',
-            secondTeamCountruCode: 'AR',
+            secondTeamCountryCode: 'AR',
 
             guesses: {
                 create: {
@@ -55,7 +55,7 @@ async function main() {
                 }
             }
         }
-    })
-
-    
+    })    
 }
+
+main()
